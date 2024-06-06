@@ -183,7 +183,7 @@
                                 </div>
               
                                 <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-block btn-lg"
-                                  data-mdb-ripple-color="dark">Bước Tiếp Theo</button>
+                                  data-mdb-ripple-color="dark" onclick="moveToNextStep()">Bước Tiếp Theo</button>
               
                               </div>
                             </div>
@@ -416,9 +416,20 @@ function applyDiscount() {
 // window.removeItem = removeItem;
 // window.addProductToCart = addProductToCart;
 
+
+function saveCartToLocalStorage() {
+            let gioHang = sessionStorage.getItem('gioHang');
+            localStorage.setItem('gioHang', gioHang);
+        }
+
+
 document.addEventListener("DOMContentLoaded", updateCartDisplay);
 
-
+function moveToNextStep() {
+            saveCartToLocalStorage();
+            window.location.href = 'Project.html';
+            alert("Đã thực hiện mua hàng");
+        }
 
 
     </script>
