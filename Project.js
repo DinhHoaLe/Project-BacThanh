@@ -311,7 +311,7 @@ if(user === null){
         alert("Đăng nhập thành công");
         sessionStorage.setItem('loggedInUser', username); // Lưu trạng thái đăng nhập
         checkLoginStatus(); // Cập nhật giao diện sau khi đăng nhập
-        window.location.href="/PersonalInfo.html"; // Chuyển hướng đến trang Item.html
+        window.location.href="PersonalInfo.html"; // Chuyển hướng đến trang Item.html
     } else {
         alert("Đăng nhập thất bại");
     }
